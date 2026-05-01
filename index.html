@@ -550,10 +550,12 @@
                 gameState.players.forEach(player => {
                     html += `
                         <td>
-                            <input type="number" class="score-input" 
+                            <input type="text" class="score-input" 
                                    data-player="${player}" 
                                    data-round="${round}"
                                    value="0"
+inputmode="text"
+pattern="[-]?[0-9]*"
                                    onchange="updateTotal('${player}')">
                         </td>`;
                 });
