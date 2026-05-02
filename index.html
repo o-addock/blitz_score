@@ -369,6 +369,39 @@
             margin: 30px auto;
         }
 
+        /* GAME SCREEN */
+
+        .game-header{
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background: linear-gradient(135deg, #f0f8ff 0%, #e6f3ff 100%);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            
+            background : #fff;
+            border: 3px solid #111;
+            border-radius: 16px;
+            padding: 20px;
+            /* margin: 20px 0; */
+            margin-bottom: 20px;
+            box-shadow: 0 4px 0 #111;
+        }
+
+        .game-header .round-title {
+            margin: 0;
+            font-size: 1.5rem;
+            color: #333;
+        }
+
+        .game-header h1 {
+            margin: 0;
+            font-size: 1.8rem;
+            /* color: #e74c3c; */
+            /* text-shadow: 2px 2px 0 rgba(0,0,0,0.1); */
+        }
+
         @media (max-width: 480px) {
             body {
                 padding: 10px;
@@ -445,7 +478,11 @@
 
     <!-- GAME SCREEN (Round by Round) -->
     <div id="game-screen" class="screen">
-        <h2 class="round-title" id="round-title">Round 1 / 4</h2>
+        <header id="game-header" class="game-header">
+            <h1 class="title">BLITZ! SCORE</h1>
+            <h2 class="round-title" id="round-title">Round 1 / 4</h2>
+        </header>
+
         <div class="player-list" id="player-list">
             <!-- Dynamically generated -->
         </div>
